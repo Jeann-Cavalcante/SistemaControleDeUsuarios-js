@@ -33,8 +33,12 @@ class User {
     return this._admin;
   }
 
-  getPassword() {
-    return this._password;
+  getPassword(password) {
+    if (password == "senha do moderador") {
+      return this._password;
+    } else {
+      return "senha inválida";
+    }
   }
 
   getDate() {
