@@ -10,7 +10,7 @@ class User {
     this._date =
       date.toLocaleDateString("pt-BR") +
       " " +
-      date.toLocaleDateString("pt-BR").slice(0, 5);
+      date.toLocaleTimeString("pt-BR").slice(0, 5);
   }
 
   getId() {
@@ -34,7 +34,7 @@ class User {
   }
 
   getPassword(password) {
-    if (password == "senha do moderador") {
+    if (password === "senha do moderador") {
       return this._password;
     } else {
       return "senha inválida";
