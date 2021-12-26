@@ -83,6 +83,7 @@ class UserController {
         registerData.password
       );
     }
+    console.log(registerData);
     let fileEl = elements.photo;
     if (fileEl.files.length == 0) {
       user.setPhoto("img/icon.jpg");
@@ -101,8 +102,6 @@ class UserController {
           console.Error(e);
         }
       );
-
-      this.addLine(user);
     }
   }
   addEventBtns() {
